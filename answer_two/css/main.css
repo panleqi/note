@@ -1,0 +1,189 @@
+*{
+     padding: 0;
+     margin: 0;
+}
+ li{
+     list-style: none;
+}
+ a{
+     text-decoration: none;
+}
+ body,html{
+     width: 100%;
+     height: 100%;
+     background: #EEEEEE;
+     overflow-x: hidden;
+}
+ .bright .active{
+     background: #00A0E9;
+     color: #FFFFFF;
+     border: 1px solid #00A0E9;
+}
+ .wrap{
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     margin: auto;
+     width: 100%;
+     height: 22.186666666666667rem;
+     box-sizing:border-box;
+	 -moz-box-sizing:border-box; /* Firefox */
+	 -webkit-box-sizing:border-box; /* Safari */
+     font-size: 0.6956521739130435rem;
+     background: #EEEEEE;
+}
+ .btn{
+     margin: 1.4rem auto;
+     background: #00A0E9;
+     border-radius: 1.0869565217391304rem;
+     font-size: 0.768rem;
+     width: 9.782608695652174rem;
+     height: 1.7391304347826086rem;
+     line-height: 1.7391304347826086rem;
+     color: #FFFFFF;
+     text-align: center;
+}
+ .answer{
+     position: relative;
+     width: 100%;
+     height: 18.91304347826087rem;
+     overflow-x: hidden;
+}
+ .subject-width{
+     width: 130.43478260869566rem;
+     padding-left: 2.1333333333333333rem;
+     padding-right: 1.0666666666666667rem;
+     transition: 0.5s;
+     position: absolute;
+     left: 0;
+}
+ .subject-width:after{
+     content:"";
+     display:block;
+     clear:both;
+}
+ .subject-width>div{
+     padding-right: 1.0666666666666667rem;
+     width: 11.733333333333333rem;
+     height: 18.56rem;
+     border-radius: 1.0869565217391304rem;
+     float: left;
+}
+ .title{
+     padding-left: 0.6521739130434783rem;
+     padding-right: 0.6521739130434783rem;
+     width: 100%;
+     height: 4.3478260869565215rem;
+     font-size: 0.768rem;
+     color: #FFFFFF;
+     background: #54C4F6;
+     box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+     border-top-left-radius: 1.0869565217391304rem;
+     border-top-right-radius: 1.0869565217391304rem;
+     display: flex;
+}
+ .title span{
+     margin: auto auto auto auto;
+}
+ .list,.bright{
+     background: #FFFFFF;
+}
+ .list{
+     width: 100%;
+     height: 9.941333333333333rem;
+     padding: 0.8533333333333334rem;
+     box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+}
+.list li:nth-of-type(1) {
+    margin-top: 0;
+}
+ .list li{
+ 	margin-top: 0.6826666666666666rem;
+     font-size: 0.768rem;
+     color: #666666;
+}
+ .bright{
+     width: 100%;
+     height: 4.043478260869565rem;
+     border-top: 0.043478260869565216rem solid #EEEEEE;
+     font-size: 0;
+     padding: 0 0.43478260869565216rem;
+     outline: none;
+     box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+     border-bottom-left-radius: 1.0869565217391304rem;
+     border-bottom-right-radius: 1.0869565217391304rem;
+     display: flex;
+}
+ .bright span{
+     margin: auto auto auto auto;
+     display: inline-block;
+     width: 1.6521739130434783rem;
+     height: 1.6521739130434783rem;
+     line-height: 1.6521739130434783rem;
+     text-align: center;
+     font-size: 0.768rem;
+     color: #666666;
+     background: #FFFFFF;
+     border: 1px solid #CCCCCC;
+     border-radius: 50%;
+}
+/*弹窗*/
+ .show-window{
+     width:100%;
+     height: 100%;
+     background: rgba(0,0,0,0.5);
+     font-size: 0.6521739130434783rem;
+     position: fixed;
+     top: 0;
+     left: 0;
+     display: none;
+}
+ .show-window>div{
+     width: 75%;
+     height: 5.6521739130434785rem;
+     background: #FFFFFF;
+     padding: 1.0869565217391304rem 0.8695652173913043rem 0.6521739130434783rem 0.8695652173913043rem;
+     position: absolute;
+     top: 50%;
+     left:50%;
+     transform: translate(-50%,-50%);
+     -ms-transform: translate(-50%,-50%);
+     -moz-transform: translate(-50%,-50%);
+     -webkit-transform: translate(-50%,-50%);
+     -o-transform: translate(-50%,-50%);
+     box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+}
+ .show-btn{
+     font-size: 0.6956521739130435rem;
+     position: absolute;
+     bottom: 0.8695652173913043rem;
+     right: 1.0869565217391304rem;
+     color: #09b126;
+}
+/*动画*/
+ @keyframes flash {
+     0%, 50%, to {
+         color: white;
+         background: #ee7070;
+         opacity: 1;
+    }
+     25%, 75% {
+         color: #666666;
+         opacity: 0.5;
+         background: white;
+    }
+}
+ .flash {
+     animation: flash 1s !important;
+}
+ 
