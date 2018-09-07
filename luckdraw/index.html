@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>抽奖</title>
+		<!--<link rel="stylesheet" type="text/css" href="../commonStyle.css-v=20180731171046.css" />-->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<!--<script src="../jquery-2.2.4.min.js-v=20180731171046"  type="text/javascript"></script>-->
+		<!--<script src="../config.js-v=20180731171046" type="text/javascript"></script>-->
+		<!--<script src="js/server.js" type="text/javascript"></script>-->
+		<!--<script src="js/guess.js" type="text/javascript"></script>-->
+		<script type="text/javascript">
+//			window.onload = window.onresize = function() { /*自适应屏幕函数  1rem=20px*/
+//				var html = document.getElementsByTagName('html')[0];
+//				html.style.fontSize = window.innerWidth / 16 + 'px';
+//			}
+			(function(doc, win) {
+				var docEl = doc.documentElement,
+					resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+					recalc = function() {
+						var clientWidth = docEl.clientWidth;
+						if(!clientWidth) return;
+						docEl.style.fontSize =  (clientWidth / 16) + 'px';
+					};
+
+				if(!doc.addEventListener) return;
+				win.addEventListener(resizeEvt, recalc, false);
+				doc.addEventListener('DOMContentLoaded', recalc, false);
+			})(document, window);
+		</script>
+	</head>
+
+	<body>
+		<div class="guess-content">
+			<!--游戏块-->
+			<div class="guess-container">
+				<!--头部-->
+				<div class="guess-title">
+					<span class="myrecord" style="opacity: 0;">我的记录</span>
+					<h2>抽奖</h2>
+					<span class="openinst">我的记录</span>
+				</div>
+				<!--内容-->
+				<div class="game-wrap">
+					<div class="game-content">
+						<div class="record">
+							<div class="record-l">中奖记录</div>
+							<div class="record-r">
+								<span class="record-item"><img src="img/game_icon_cat.png"/></span>
+								<ul class="list">
+									<!--<li>静鸡鸡中了200万</li>-->
+								</ul>
+								<!--<span>静鸡鸡中了200万</span>-->
+							</div>
+						</div>
+						<div class="game-main">
+							<div class="game-loop">
+								<!--图片-->
+								<!--<div data-zoonid="1" class="game-loop-item"><img src="img/game_icon_rabbit.png" /></div>-->
+							</div>
+							<!--点击抽奖-->
+							<div class="luck-draw">点击抽奖</div>
+						</div>
+					</div>
+				</div>
+				<!--我的递递-->
+				<div class="delivery">
+					<p class="delivery-p">
+						<span>我的递递：</span>
+						<span class="delivery-number"></span> 个
+					</p>
+				</div>
+				<!--说明-->
+				<div class="explain">
+					<div class="explain-title">
+						<span class="">游戏规则：</span>
+					</div>
+					<div class="explain-content">
+						<p>1.每次抽奖消耗100个递递，有机会中18-80元商城商品抵用券或事物奖品，10天内消费有效。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--弹窗-->
+		<!--<div class="show-window">
+			<div>
+				<p class="show-img"><img src="img/pople.png"/></p>
+				<p class="show-content">很遗憾，未中奖！</p>
+				<p class="show-btn">确认</p>
+			</div>
+		</div>-->
+		<div class="bg-black">
+			<div class="result-pro">
+				<div class="result-title">
+					<p>开奖啦!</p>
+				</div>
+				<div class="result-zoo-icon">
+					<img src="img/game_icon_dog.png" tppabs="http://m.meicool.com/app/guess/img/game_icon_dog.png" />
+				</div>
+				<p class="result-zoo-exp"></p>
+				<p class="result-ind"><em></em></p>
+				<span class="off-result">再来一遍</span>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="js/jquery-1.12.4.js" ></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		
+	</body>
+
+</html>

@@ -1,0 +1,926 @@
+body{
+	background: #0D2748;
+	user-select: none;
+	-webkit-user-select: none;
+}
+.guess-content{
+	/*height: 18rem;*/
+	overflow-y: auto;
+}
+.guess-container {
+	border-bottom-left-radius: 0.4rem;
+	border-bottom-right-radius: 0.4rem;
+	-display: none;
+}
+.rule-container{
+	padding-top: 1.4rem;
+	display: none;
+}
+.record-container{
+	padding-top: 1.3rem;
+	display: none;
+}
+
+.guess-title {
+	padding: 0.4rem 0;
+	display: flex;
+	background: #0d2748;
+}
+
+.guess-title>h2 {
+	margin: auto;
+	font-size: 0.7rem;
+	font-weight: bold;
+	color: #40bdff;
+}
+
+.guess-title>span {
+	font-size: 0.6rem;
+	color: #5992d7;
+}
+
+.guess-title>span:nth-child(1) {
+	margin: auto 0 auto 0.3rem;
+}
+
+.guess-title>span:nth-child(3) {
+	margin: auto 0.3rem auto 0;
+}
+
+.game-wrap {
+	margin-top: 0.2rem;
+	padding: 0.3rem;
+	background: #81b6fa;
+	border-radius: 0.4rem;
+}
+
+.game-content {
+	padding: 0.2rem;
+	min-height: 14rem;
+	background: #448fec;
+	border-radius: 0.3rem;
+}
+
+.record {
+	font-size: 0;
+}
+
+.record>div {
+	display: inline-block;
+	height: 0.75rem;
+	background: rgb(41, 115, 208);
+	vertical-align: middle;
+}
+
+.record-l {
+	width: 20%;
+	font-size: 0.5rem;
+	line-height: 0.85rem;
+	text-align: center;
+	color: #C1DDFF;
+}
+
+.record-r {
+	margin-left: 1%;
+	width: 79%;
+}
+
+.record-item {
+	/*margin: 0 0.21rem;*/
+	display: inline-block;
+	vertical-align: middle;
+	width: 0.75rem;
+	height: 0.75rem;
+}
+
+.record-item>img {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 80%;
+}
+
+.game-main {
+	position: relative;
+	margin-top: 0.2rem;
+	width: 100%;
+	height: 13.1rem;
+}
+
+.game-loop {
+	width: 100%;
+	height: 100%;
+}
+
+.game-loop>.game-loop-item {
+	position: absolute;
+	width: 1.8rem;
+	height: 1.7rem;
+	display: flex;
+}
+
+.game-loop>.game-loop-item:nth-child(odd) {
+	background: url("../img/game_lattice1.png"/*tpa=http://m.meicool.com/app/guess/img/game_lattice1.png*/) no-repeat;
+	background-size: 100% 100%;
+}
+
+.game-loop>.game-loop-item:nth-child(even) {
+	background: url("../img/game_lattice2.png"/*tpa=http://m.meicool.com/app/guess/img/game_lattice2.png*/) no-repeat;
+	background-size: 100% 100%;
+}
+
+.game-loop>.game-loop-item:nth-child(1) {
+	top: 0;
+	left: 0;
+}
+
+.game-loop>.game-loop-item:nth-child(2) {
+	top: 0;
+	left: 2.08rem;
+}
+
+.game-loop>.game-loop-item:nth-child(3) {
+	top: 0;
+	left: 4.16rem;
+}
+
+.game-loop>.game-loop-item:nth-child(4) {
+	top: 0;
+	left: 6.24rem;
+}
+
+.game-loop>.game-loop-item:nth-child(5) {
+	top: 0;
+	left: 8.32rem;
+}
+
+.game-loop>.game-loop-item:nth-child(6) {
+	top: 0;
+	left: 10.4rem;
+}
+
+.game-loop>.game-loop-item:nth-child(7) {
+	top: 0;
+	left: 12.46rem;
+}
+
+.game-loop>.game-loop-item:nth-child(8) {
+	top: 1.9rem;
+	left: 12.46rem;
+}
+
+.game-loop>.game-loop-item:nth-child(9) {
+	top: 3.8rem;
+	left: 12.46rem;
+}
+
+.game-loop>.game-loop-item:nth-child(10) {
+	top: 5.7rem;
+	left: 12.46rem;
+}
+
+.game-loop>.game-loop-item:nth-child(11) {
+	top: 7.6rem;
+	left: 12.46rem;
+}
+
+.game-loop>.game-loop-item:nth-child(12) {
+	top: 9.5rem;
+	left: 12.46rem;
+}
+
+.game-loop>.game-loop-item:nth-child(13) {
+	top: 11.4rem;
+	left: 12.46rem;
+}
+
+.game-loop>.game-loop-item:nth-child(14) {
+	top: 11.4rem;
+	left: 10.4rem;
+}
+
+.game-loop>.game-loop-item:nth-child(15) {
+	top: 11.4rem;
+	left: 8.32rem;
+}
+.game-loop>.game-loop-item:nth-child(16) {
+	top: 11.4rem;
+	left: 6.24rem;
+}
+.game-loop>.game-loop-item:nth-child(17) {
+	top: 11.4rem;
+	left: 4.16rem;
+}
+.game-loop>.game-loop-item:nth-child(18) {
+	top: 11.4rem;
+	left: 2.08rem;
+}
+.game-loop>.game-loop-item:nth-child(19) {
+	top: 11.4rem;
+	left: 0rem;	
+}
+
+.game-loop>.game-loop-item:nth-child(20) {
+	top: 9.5rem;
+	left: 0rem;
+}
+
+.game-loop>.game-loop-item:nth-child(21) {
+	top: 7.6rem;
+	left: 0rem;
+}
+
+.game-loop>.game-loop-item:nth-child(22) {
+	top: 5.7rem;
+	left: 0rem;
+}
+
+.game-loop>.game-loop-item:nth-child(23) {
+	top: 3.8rem;
+	left: 0rem;
+}
+
+.game-loop>.game-loop-item:nth-child(24) {
+	top: 1.9rem;
+	left: 0rem;
+}
+
+.game-loop-item>img {
+	max-width: 70%;
+	margin: auto;
+}
+
+.game-loop>div.active {
+	transform: scale(1.1);
+	background: url("../img/game_lattice_s.png"/*tpa=http://m.meicool.com/app/guess/img/game_lattice_s.png*/) no-repeat !important;
+	background-size: 100% 100% !important;
+}
+
+.game-bets-exp {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 10.66rem;
+	height: 7.4rem;
+}
+
+.game-bets-title {
+	position: relative;
+	width: 100%;
+	height: 0.75rem;
+}
+
+.bets-title-l {
+	display: inline-block;
+	width: 2.2rem;
+	height: 0.75rem;
+	padding: 0 0.3rem;
+	border-radius: 0.35rem;
+	font-size: 0.6rem;
+	line-height: 0.8rem;
+	vertical-align: top;
+	background: #2f7cd8;
+	color: #FFFFFF;
+}
+
+.bets-title-r {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 4.5rem;
+	height: 0.75rem;
+	border-radius: 0.35rem;
+	font-size: 0.6rem;
+	line-height: 0.8rem;
+	text-align: center;
+	background: #2f7cd8;
+	color: #d1db5e;
+}
+.bets-title-l>em{
+	vertical-align: top;
+	display: inline-block;
+	max-width: 1.5rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
+
+.game-bets-choice {
+	font-size: 0;
+	margin-top: 0.2rem;
+}
+
+.game-bets-choice>li {
+	position: relative;
+	display: inline-block;
+	margin-left: 0.1rem;
+	margin-top: 0.1rem;
+	width: 2.58rem;
+	height: 3.17rem;
+	border-radius: 0.2rem;
+	background: #2c78d8;
+	vertical-align: top;
+	box-sizing: border-box;
+}
+
+.game-bets-choice>li.active {
+	border: 0.05rem solid #3FFDFF;
+}
+
+.game-bets-choice>li:nth-child(4n+1) {
+	margin-left: 0;
+}
+
+.game-bets-choice>li:nth-child(1),
+.game-bets-choice>li:nth-child(2),
+.game-bets-choice>li:nth-child(3),
+.game-bets-choice>li:nth-child(4) {
+	margin-top: 0;
+}
+
+.bets-icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	max-width: 80%;
+}
+
+.bets-num {
+	position: absolute;
+	top: 0.1rem;
+	width: 100%;
+	font-size: 0.5rem;
+	text-align: center;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-shadow: #d34f0e 1px 0 0, #d34f0e 0 1px 0, #d34f0e -1px 0 0, #d34f0e 0 -1px 0;
+	z-index: 2;
+}
+
+.bets-odd {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	font-size: 0.65rem;
+	text-align: center;
+	font-weight: bold;
+	color: rgba(206, 37, 81, .8);
+	text-shadow: #fff 1px 0 0, #fff 0 1px 0, #fff -1px 0 0, #fff 0 -1px 0;
+	z-index: 2;
+}
+
+.game-foot {
+	margin-top: 0.5rem;
+	margin-bottom: 0.3rem;
+	font-size: 0;
+}
+
+.game-foot>div {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.game-foot-l {
+	padding: 0.15rem 0 0.1rem 0;
+	width: 5.9rem;
+	background: rgb(41, 115, 208);
+	border-radius: 0.2rem;
+}
+
+.game-foot-l>p {
+	padding: 0 0.15rem;
+	font-size: 0.6rem;
+	color: #FFFFFF;
+	max-width: 5.6rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.game-foot-l>p>em {
+	margin-left: 0.2rem;
+}
+
+.game-foot-l>p:nth-child(2) {
+	color: #f2e14b;
+}
+
+.game-foot-r {
+	margin-left: 0.2rem;
+	width: 8.9rem;
+}
+
+.amount-item {
+	margin-left: 0.225rem;
+	display: inline-block;
+	width: 1.6rem;
+	height: 1.6rem;
+	line-height: 1.6rem;
+	font-size: 0.5rem;
+	text-align: center;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-shadow: #f08302 1px 0 0, #f08302 0 1px 0, #f08302 -1px 0 0, #f08302 0 -1px 0;
+	z-index: 9;
+}
+
+.amount-ban-item {
+	margin-left: 0.225rem;
+	display: inline-block;
+	width: 1.6rem;
+	height: 1.6rem;
+	line-height: 1.6rem;
+	font-size: 0.5rem;
+	text-align: center;
+	font-weight: bold;
+	color: rgb(228, 228, 228);
+	text-shadow: rgba(137, 137, 137) 1px 0 0, rgba(137, 137, 137) 0 1px 0, rgba(137, 137, 137) -1px 0 0, rgba(137, 137, 137) 0 -1px 0;
+	z-index: 9;
+	background: url("../img/game_stars_d.png"/*tpa=http://m.meicool.com/app/guess/img/game_stars_d.png*/) no-repeat;
+	background-size: 100% 100%;
+}
+
+.amount-item-c1 {
+	background: url("../img/game_stars1.png"/*tpa=http://m.meicool.com/app/guess/img/game_stars1.png*/) no-repeat;
+	background-size: 100% 100%;
+}
+
+.amount-item-c2 {
+	background: url("../img/game_stars2.png"/*tpa=http://m.meicool.com/app/guess/img/game_stars2.png*/) no-repeat;
+	background-size: 100% 100%;
+}
+
+.amount-item-c3 {
+	background: url("../img/game_stars3.png"/*tpa=http://m.meicool.com/app/guess/img/game_stars3.png*/) no-repeat;
+	background-size: 100% 100%;
+}
+
+.amount-item-c4 {
+	background: url("../img/game_stars4.png"/*tpa=http://m.meicool.com/app/guess/img/game_stars4.png*/) no-repeat;
+	background-size: 100% 100%;
+}
+
+.amount-item-c5 {
+	background: url("../img/game_stars5.png"/*tpa=http://m.meicool.com/app/guess/img/game_stars5.png*/) no-repeat;
+	background-size: 100% 100%;
+}
+
+.game-foot-r span:nth-child(1) {
+	margin-left: 0;
+}
+
+.game-foot-r>span.active {
+	transform: scale(1.2);
+}
+
+.pro-frame {
+	position: fixed;
+	bottom: 2.8rem;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 5rem;
+	padding: 0.2rem;
+	background: rgba(0, 0, 0, .8);
+	border-radius: 0.2rem;
+	z-index: 8;
+}
+
+.pro-frame>p {
+	font-size: 0.6rem;
+	line-height: 1rem;
+	color: #F5F5F5;
+	text-align: center;
+}
+.bg-black{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.result-pro {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 60%;
+	z-index: 11;
+	padding: 0rem 0rem 0.6rem 0rem;
+	border-radius: 0.4rem;
+	background: #FFFFFF;
+	overflow: hidden;
+	/*display: none;*/
+}
+
+.result-title {
+	padding: 0.8rem 0rem 1rem 0rem;
+	background: url("../img/game_pop_up.png"/*tpa=http://m.meicool.com/app/guess/img/game_pop_up.png*/) no-repeat;
+	background-size: 100% 100%;
+}
+
+.result-title p {
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 0.7rem;
+}
+
+.result-zoo-icon {
+	margin: 0.2rem auto 0 auto;
+	display: flex;
+	width: 2.2rem;
+	height: 1.7rem;
+	border: 0.05rem solid #3FBEFF;
+	border-radius: 0.2rem;
+}
+
+.result-zoo-icon img {
+	max-width: 70%;
+	margin: 4px auto;
+}
+
+.result-zoo-exp {
+	margin: 0.4rem auto;
+	width: 80%;
+	font-size: 0.6rem;
+	text-align: center;
+	color: #3FBEFF;
+}
+
+.result-ind {
+	padding: 0 1rem;
+	margin-top: 0.2rem;
+	font-size: 0.5rem;
+	text-align: center;
+	color: #666666;
+}
+.result-ind>em{
+	color: #F28202;
+}
+.off-result{
+	margin: 0.3rem auto 0 auto;
+	display: block;
+	font-size: 0.6rem;
+	width: 4.5rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	border-radius: 0.9rem;
+	text-align: center;
+	background: #3FBEFF;
+	color: #FFFFFF;
+}
+
+.page-title{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1.3rem;
+	background: #4772A7;
+}
+.back{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto auto auto 0.3rem;
+	width: 0.4rem;
+	height: 0.7rem;
+	background: url("../img/back.png"/*tpa=http://m.meicool.com/app/guess/img/back.png*/) no-repeat;
+	background-size: 100% 100%;
+}
+.title-exp{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	width: 3rem;
+	line-height: 1.3rem;
+	font-size: 0.6rem;
+	text-align: center;
+	color: #FFFFFF;
+}
+.rule-exp{
+	padding: 0 0.3rem;
+}
+.rule-exp>p{
+	padding: 0.3rem 0;
+	font-size: 0.6rem;
+	color: #81A4D1;
+}
+
+
+
+.record-reg{
+	padding: 0 0.3rem;
+	min-height: 10rem;
+}
+
+.record-list{
+	padding: 0.4rem 0;
+}
+.record-list>li{
+	margin-top: 0.4rem;
+	border-radius: 0.25rem;
+	overflow: hidden;
+	background: #365782;
+}
+.record-list>li:nth-child(1){
+	margin-top: 0;
+}
+.record-t{
+	background: #5879A4;
+	height: 1rem;
+	font-size: 0;
+}
+.record-t>span{
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+	line-height: 1.1rem;
+	font-size: 0.5rem;
+	text-align: center;
+	color: #DDDDDD;
+}
+.record-t>span:nth-child(1){
+	width: 25%;
+}
+.record-t>span:nth-child(2){
+	width: 25%;
+}
+.record-t>span:nth-child(3){
+	width: 50%;
+}
+.record-c{
+	font-size: 0;
+}
+.record-c>div{
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0.6rem;
+	text-align: center;
+	color: #F6F6F6;
+}
+.record-c>div:nth-child(1){
+	width: 25%;
+}
+.record-c>div:nth-child(2){
+	width: 25%;
+}
+.record-c>div:nth-child(3){
+	width: 50%;
+}
+.zoon-bet-all{
+	padding: 0.08rem 0;
+	font-size: 0;
+}
+.zoon-bet-all>span{
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0.08rem 0;
+	width: 48.8%;
+	font-size: 0.6rem;
+}
+.zoon-bet-all>span.active{
+	color: #3FFDFF;
+}
+.record-b{
+	display: flex;
+	margin-top: 0.08rem;
+	height: 1rem;
+	border-top: 0.05rem solid #476893;
+	box-sizing: border-box;
+}
+.record-b>span{
+	font-size: 0.6rem;
+	color: #F6F6F6;
+	line-height: 1.1rem;
+}
+.record-b>span:nth-child(1){
+	margin: auto auto auto 0.7rem;
+}
+.record-b>span:nth-child(2){
+	margin: auto 0.7rem auto auto;
+}
+.record-b .active_y{
+	color: #3FFDFF;
+}
+.record-b .active_n{
+	color: #7BA3D6;
+}
+
+
+.loading{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 2rem;
+	height: 2rem;
+	z-index: 12;
+	display: none;
+}
+.loading img{
+	width: 100%;
+	height: 100%;
+}
+
+.data-crash{
+	position: fixed;
+	top: 1.75rem;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 12;
+	background: #0D2748;
+	display: none;
+}
+
+.data-crash>p{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 100%;
+	height: 1rem;
+	line-height: 1rem;
+	font-size: 0.6rem;
+	text-align: center;
+	color: #F5F5F5;
+}
+.init-loading{
+	position: fixed;
+	top: 1.75rem;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 12;
+	background: #0D2748;
+}
+.init-loading>img{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 2rem;
+	height: 2rem;
+}
+
+@keyframes move{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(-360deg);}
+}
+@-webkit-keyframes move{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(-360deg);}
+}
+@-ms-keyframes move{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(-360deg);}
+}
+@-moz-keyframes move{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(-360deg);}
+}
+.move{
+	animation: move 0.5s linear infinite;
+	-webkit-animation: move 0.5s linear infinite;
+	-ms-animation: move 0.5s linear infinite;
+	-moz-animation: move 0.5s linear infinite;
+}
+/*抽奖*/
+.luck-draw {
+    width: 5rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #2082D2;
+    font-size: 0.7rem;
+    background: #e8f527;
+    border-radius: 0.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    cursor: pointer;
+    font-weight: 700;
+}
+.record-r >span{
+	vertical-align: top;
+	margin-left: 15px;
+}
+.record-r{
+	overflow: hidden;
+}
+.record-r >.list{
+	margin: 0;
+	width: 78%;
+	/*height: 100%;*/
+	padding-left: 15px;
+	/*vertical-align: middle;*/
+	display: inline-block;
+	font-size: 10px;
+	color: rgba(255,255,255,0.8);
+	transition: 0.5s;
+}
+.list>li{
+	height: 100%;
+}
+li{
+	list-style: none;
+}
+/*说明*/
+.explain{
+	color: #5992d7;
+	/*padding-top: 15px;*/
+	padding-left: 8px;
+}
+.explain-title{
+	font-size: 15px;
+}
+.explain-content{
+	font-size: 13px;
+	text-indent: 13px;
+}
+/*我的递递*/
+.delivery{
+	font-size: 14px;
+	padding: 0 8px;
+	color: #5992d7;
+}
+/*弹窗*/
+ .show-window{
+     width:100%;
+     height: 100%;
+     background: rgba(0,0,0,0.5);
+     font-size: 0.6521739130434783rem;
+     position: fixed;
+     top: 0;
+     left: 0;
+     display: none;
+}
+.show-content{
+	margin-top: 30px;
+	text-align: center;
+	padding: 0;
+}
+ .show-window>div{
+     width: 60%;
+     height: 215px;
+     background:#f8f8f8;
+     border-radius: 10px;
+     position: absolute;
+     top: 50%;
+     left:50%;
+     transform: translate(-50%,-50%);
+     -ms-transform: translate(-50%,-50%);
+     -moz-transform: translate(-50%,-50%);
+     -webkit-transform: translate(-50%,-50%);
+     -o-transform: translate(-50%,-50%);
+     box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+}
+ .show-btn{
+ 	padding: 0;
+ 	margin: 0;
+     font-size: 0.6956521739130435rem;
+     position: absolute;
+     bottom: 0.8695652173913043rem;
+     right: 1.0869565217391304rem;
+     color: #09b126;
+}
+.show-img{
+	padding: 0;
+ 	margin: 0;
+	width: 70px;
+	height: 60px;
+}
+.show-img img{
+	width: 100%;
+	height: 100%;
+}
