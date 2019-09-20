@@ -1,0 +1,24 @@
+﻿
+  本机ip地址 ： 192.168.10.108
+  江为管理系统首页：http://localhost/JWmes/index
+
+  thymeleaf详细教程 : https://blog.csdn.net/wangmx1993328/article/category/7804809
+
+  微信api调试工具 ： 				https://mp.weixin.qq.com/wikit=resource/res_main&id=mp1455784140   
+
+   nodejs + vue 安装教程 ： https://www.cnblogs.com/goldlong/p/8027997.html
+   vuex状态管理 ：
+             https://baijiahao.baidu.com/s?id=1618794879569468435&wfr=spider&for=pc
+   axios二次封装博客地址 ：https://www.jianshu.com/p/9077baa9d543
+   打包vue项目 ：https://jingyan.baidu.com/article/22fe7cedc8503f3002617f0b.html
+
+   商品详情发布系统首页地址： http://39.108.225.193:8085/GoodsPub/index#
+   商品发布系统首页  ： http://192.168.10.200:8085/Ttjf/index
+   商品发布系统首页外网 ：http://39.108.225.193:443/Ttjf/login
+   陶陶居1号： http://192.168.10.200:8085/Ttjf/business/goodsFront/toGoodsDetail
+   淘淘居后台：http://ttj.2mashi.com/Ttjf/index
+
+   natapp地址 ： https://natapp.cn/tunnel/lists
+   natapp启动命令 ： natapp -authtoken=
+
+   图片预览插件地址 ： http://npm.taobao.org/package/vue-photo-preview
