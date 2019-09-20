@@ -1,0 +1,28 @@
+request命令：
+     npm remove request  
+     npm install request
+
+axios命令：
+ 	cnpm install axios
+
+基于node.js下安装sass ：
+   1、npm install --save-dev sass-loader
+
+
+   2、npm install --save-dev node-sass
+
+把npm升级为cnpm命令：
+    npm install cnpm -g
+
+然后安装vuex：
+     cnpm install vuex --save
+
+安装yarn：
+   npm install -g yarn   //在NPM 中安装
+安装yarn依赖：
+   yarn install
+
+启动LMS命令：
+    docker start Lmysql
+    docker start Lredis
+    123456
